@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Aysil</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+         {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #654633;
+            color: #333;
+            text-align: center;
+        }
+
+        .main-header {
+            width: 100%;
+            background-color: #fedee9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .logo .weverse {
+            color: #ffb98d;
+            margin-right: 10px;
+        }
+
+        .logo .nct {
+            color: #000;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icons i {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            background-color: #f3b3cd;
+            padding: 10px 0;
+            color: #fff;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 15px;
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        .nav-bar a:hover,
+        .nav-bar a.active {
+            font-weight: bold;
+        }
+        .nav-bar a.active::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            width: 80%; 
+            max-width: 800px;  
+            background-color: #ccbeb3;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 40px auto; 
+            padding: 40px 25px; 
+        }
+
+        .main-content h1 {
+            color: #ff7f89;
+            font-size: 35px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .main-content p {
+            font-size: 17px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .main-content img {
+            max-width: 350px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .cta-button {
+            padding: 12px 20px;
+            background-color: #ff7f89;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff5c6f;
+        }
+
+       
+        footer {
+            background-color: #ffb6b9;
+            padding: 1px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        footer p {
+            font-size: 15px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            color: #ff7f89;
+        }
+
+      
+        @media (max-width: 600px) {
+            nav a {
+                font-size: 14px;
+                margin: 0 10px;
+            }
+
+            .cta-button {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="logo">
+                <span class="nct">All About Aysil</span>
+            </div>
+           <div class="icons">
+                <a href="https://www.instagram.com/alsyafrds/?hl=en" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@alsyafrds" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+         <nav class="nav-bar">
+            <a href="index.html" class="active">HOME</a>
+            <a href="me.html">ME</a>
+            <a href="interest.html">INTEREST</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h1>Welcome to My Website!</h1>
+        <p>I'm so glad you're here! Feel free to explore the content I've created just for you.</p>
+        <img src="home.png" alt="Profile Image">
+        
+        <div class="cta-buttons">
+            <a href="me.html" class="cta-button">Learn More</a>
+            <a href="contact.html" class="cta-button">Contact Me</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MyWebsite. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
