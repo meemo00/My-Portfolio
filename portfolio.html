@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Aysil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+         {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #654633;
+            color: #333;
+            text-align: left;
+        }
+
+        .main-header {
+            width: 100%;
+            background-color: #fedee9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .logo .weverse {
+            color: #ffb98d;
+            margin-right: 10px;
+        }
+
+        .logo .nct {
+            color: #000;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icons i {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            background-color: #f3b3cd;
+            padding: 10px 0;
+            color: #fff;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 15px;
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        .nav-bar a:hover,
+        .nav-bar a.active {
+            font-weight: bold;
+        }
+
+        .nav-bar a.active::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+
+        .sidebar {
+            background-color: #ccbeb3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.8rem;
+            color: #654633;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .sidebar p {
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .sidebar .contact {
+            margin-top: 20px;
+        }
+
+        .sidebar .contact h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .contact p {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .main {
+            background-color: #ccbeb3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .main h2 {
+            font-size: 1.8rem;
+            color: #654633;
+            margin-bottom: 20px;
+        }
+
+        .main .section {
+            margin-bottom: 20px;
+        }
+
+        .main .section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #d8485e;
+        }
+
+        .main .section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .main .section ul li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .main .section p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #f3b3cd;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="logo">
+                <span class="nct">All About Aysil</span>
+            </div>
+            <div class="icons">
+                <a href="https://www.instagram.com/alsyafrds/?hl=en" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@alsyafrds" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+         <nav class="nav-bar">
+            <a href="index.html" class="active">HOME</a>
+            <a href="me.html">ME</a>
+            <a href="interest.html">INTEREST</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <img src="PASSPORT%20PHOTO.jpg" alt="Profile Picture">
+            <h2>Fealianty Alisya Law</h2>
+            <p>Web Developer | Designer</p>
+            <div class="contact">
+                <h3>Contact</h3>
+                <p>Email: fsylpy17@gmail.com</p>
+                <p>Phone: +60137039048</p>
+                <p>Location: Kuching, Sarawak</p>
+            </div>
+        </aside>
+
+        <main class="main">
+            <h2>Curriculum Vitae</h2>
+            <div class="section" id="about">
+                <h3>About Me</h3>
+                <p>Hello! I am a dedicated Information Management student with a strong academic background in data organization, database management, and information systems. Through my coursework and hands-on projects, I have gained experience in managing and analyzing data, ensuring data integrity, and utilizing various software tools to optimize information workflows. In addition, I have developed skills in web designing using HTML and CSS, allowing me to create functional and visually appealing websites. I am also proficient in Adobe Premiere Pro, where I have worked on video editing and content creation. I am eager to apply my knowledge and contribute to an organization by improving data handling processes, creating user-friendly web interfaces, and utilizing multimedia to enhance communication.</p>
+            </div>
+            <div class="section" id="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Communication and Presentation</li>
+                    <li>Team Collaboration and Leadership</li>
+                    <li>Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+                    <li>Social Media Management (Instagram, Facebook, LinkedIn)</li>
+                    <li>Graphic Design Tools (Canva, Adobe Photoshop, Capcut)</li>
+                    <li>Basic Programming (HTML, CSS, Python))</li>
+                    <li>Language Skills : English (Fluent), Malay (Fluent), Chinese (Fluent), Korean (Intermediate) </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                <p>Small Business @ Konno, Taman Sri Wangi (2024-present)</p>
+                <p>Part-Time Stylist @  Lovisa, VivaCity Megamall (2023-2024)</p>
+                <p>Part-Time Waitress @ Hallyu Cafe, Jalan Song (2019-2020)</p>
+            </div>
+            <div class="section">
+                <h3>Education</h3>
+                <p>Diploma in Information Management, UiTM (2022-present)</p>
+                <p>SPM, SMK Green Road (2016-2020))</p>
+                <p>UPSR, SJK(C) Chung Hua NO.4 (2010-2015)</p>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 All About Aysil. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
