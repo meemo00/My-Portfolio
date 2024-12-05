@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Aysil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+         {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #654633;
+            color: #333;
+            text-align: center;
+        }
+
+        .main-header {
+            width: 100%;
+            background-color: #fedee9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .logo .weverse {
+            color: #ffb98d;
+            margin-right: 10px;
+        }
+
+        .logo .nct {
+            color: #000;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icons i {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            background-color: #f3b3cd;
+            padding: 10px 0;
+            color: #fff;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 15px;
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        .nav-bar a:hover,
+        .nav-bar a.active {
+            font-weight: bold;
+        }
+
+        .nav-bar a.active::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        /* Content Layout */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar, .main, .banner {
+            background-color: #ccbeb3;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar .post {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .sidebar .post .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .sidebar .post .post-text {
+            font-size: 14px;
+        }
+
+        .sidebar .post strong {
+            font-size: 16px;
+        }
+
+        .post-input textarea {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #ccbeb3;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .recent-posts .post {
+            margin-bottom: 20px;
+        }
+
+        .recent-posts .post img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .banner img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            background-color: #59382c;
+            border: 1px solid #444;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+            color: #fff;
+        }
+
+        .tab:hover {
+            background-color: #444;
+        }
+
+        .tab.active {
+            background-color: #786a5d;
+        }
+
+        .dynamic-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            background-color: #59382c;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 5px;
+        }
+
+        .poster {
+            background-color: #444;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .poster:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="logo">
+                <span class="nct">All About Aysil</span>
+            </div>
+           <div class="icons">
+                <a href="https://www.instagram.com/alsyafrds/?hl=en" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@alsyafrds" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <a href="index.html" class="active">HOME</a>
+            <a href="me.html">ME</a>
+            <a href="interest.html">INTEREST</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="sidebar">
+           <div class="banner">
+            <img src="wishy.jpeg" alt="Banner">
+            <p>Main Ultimate Band!</p>
+        </div>
+    </div>
+
+        <div class="main">
+            <div class="tabs">
+                <div class="tab active" data-content="movies">Movies/Series</div>
+                <div class="tab" data-content="dramas">Dramas</div>
+                <div class="tab" data-content="singer-band">Singer/Band</div>
+            </div>
+            
+            <div id="movies/series" class="dynamic-content">
+                <div class="poster"><img src="twilight%20bd.jpeg" alt="Movie Poster"></div>
+                <div class="poster"><img src="twilight%20bd%202.jpeg" alt="Movie Poster"></div>
+                <div class="poster"><img src="howl's%20moving%20castle%20poster.jpeg" alt="Movie Poster"></div>
+                <div class="poster"><img src="Horimiya%201.jpeg" alt="Movie Poster"></div>
+                <div class="poster"><img src="from%20me%20to%20you.jpeg" alt="Band Poster"></div>
+                <div class="poster"><img src="fruit%20basket.jpeg" alt="Drama Poster"></div>
+                <div class="poster"><img src="Fate%20The%20Winx%20Saga.jpeg" alt="Drama Poster"></div>
+                <div class="poster"><img src="Man%20in%20Love%20(2021).jpeg"></div>
+            </div>
+            
+            <div id="dramas" class="dynamic-content hidden">
+                <div class="poster"><img src="Lovely%20runner%20poster%20(kdrama).jpeg" alt="Drama Poster"></div>
+                <div class="poster"><img src="Love%20Next%20Door.jpeg" alt="Drama Poster"></div>
+                <div class="poster"><img src="Alchemy%20of%20Souls.jpeg" alt="Drama Poster"></div>
+                <div class="poster"><img src="Alchemy%20of%20Souls_%20Light%20and%20Shadow%20Poster%20_%20Alchemy%20Of%20Souls%202%20Poster%20-.jpeg" alt="Drama Poster"></div>
+                <div class="poster"><img src="Everyone%20Loves%20Me%20(Chinese%20Drama%20Review%20&%20Summary)%20%E2%8B%86%20Global%20Granary.jpeg" alt="Movie Poster"></div>
+                <div class="poster"><img src="love%20between%20fairy%20and%20devil.jpeg" alt="Movie Poster"></div>
+                <div class="poster"><img src="My%20Demon.jpeg" alt="Movie Poster"></div>
+                <div class="poster"><img src="Hometown%20Chachacha%20(poster).jpeg" alt="Movie Poster"></div>
+            </div>
+            
+            <div id="singer-band" class="dynamic-content hidden">
+                <div class="poster"><img src="riize.jpeg" alt="Band Poster"></div>
+                <div class="poster"><img src="enha.jpeg" alt="Drama Poster"></div>
+                <div class="poster"><img src="THE%20BOYZ%20UPDATES%20on%20Twitter.jpeg" alt="Drama Poster"></div>
+                <div class="poster"><img src="bnd.jpeg" alt="Band Poster"></div>
+                <div class="poster"><img src="TWS%20Poster.jpeg" alt="Drama Poster"></div>
+                <div class="poster"><img src="DAY6%20%C2%B0_%20Band%20Aid.jpeg" alt="Drama Poster"></div>
+                <div class="poster"><img src="Wave%20To%20Earth%20Poster.jpeg" alt="Band Poster"></div>
+                <div class="poster"><img src="choi yuree.jpeg" alt="Drama Poster"></div>
+            </div>
+
+        </div>
+
+        <div class="banner">
+            <img src="Family%20by%20Choice%20KDrama%20Poster.jpeg" alt="Banner">
+            <p>Current on Watch!</p>
+        </div>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const dynamicContentSections = document.querySelectorAll('.dynamic-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                dynamicContentSections.forEach(section => section.classList.add('hidden'));
+                const contentId = tab.getAttribute('data-content');
+                document.getElementById(contentId).classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
